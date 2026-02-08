@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clickbait Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="vertical-navbar">
+    <a href="#">Home</a>
+    <a href="https://shezan.neocities.org/">About me</a>
+</div>
+
+<div class="content">
+
+    <h1>Clickbait Headline Generator</h1>
+
+    <p>
+        Totally ridiculous, goofy, over-the-top clickbait headlines, 
+        just like something straight out of a weird internet forum.
+    </p>
+
+    <form method="POST">
+        <p>How many silly headlines do you want?</p>
+
+        <input 
+            type="number" 
+            name="amount" 
+            min="1" 
+            max="20" 
+            value="5"
+        >
+
+        <br><br>
+
+        <button type="submit">
+            MAKE ME FAMOUS
+        </button>
+    </form>
+
+    {% if headlines %}
+        <hr>
+
+        <h2>Your Crazy Headlines:</h2>
+
+        {% for h in headlines %}
+            <div class="headline">
+                {{ h }}
+            </div>
+        {% endfor %}
+
+    {% endif %}
+
+</div>
+
+</body>
+</html>
