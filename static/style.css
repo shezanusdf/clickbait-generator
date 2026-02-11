@@ -1,151 +1,80 @@
-@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
-
 body {
-    margin: 0;
-    padding: 0;
-    background: #fff8e8;
-    font-family: 'Comic Neue', sans-serif;
-    color: #2b2b2b;
+    background-color : white;
+    font-family : "Patrick Hand", cursive;
+    padding : 20px;
 }
 
-/* FUN DOODLE NAVBAR */
-.vertical-navbar {
-    font-size: 22px;
-    font-family: 'Patrick Hand', cursive;
-    display: flex;
-    flex-direction: column;
-    text-align: right;
-    gap: 12px;
-    padding: 40px;
-    position: fixed;
-    right: 0;
-    color: #ff3366;
+.container {
+    width : 70%;
+    margin : 40px auto;
+    background-color : white;
+    padding : 30px;
+    border : 3px solid black;
+    border-radius : 15px;
 }
 
-.vertical-navbar a {
-    text-decoration: none;
-    color: #ff3366;
-    transition: 0.2s ease;
+h1{
+    font-family : "Comic Sans MS";
+    text-align : center;
+    border-botton : 2px solid black;
+    padding-bottom : 10px;
+    margin-bottom : 15px;
+    letter-spacing : 1px
 }
 
-.vertical-navbar a:hover {
-    color: #571d8d;
-    transform: rotate(-3deg);
+form {
+    margin : 20px 0;
+    text-align:center;
 }
 
-/* MAIN CONTENT AREA */
-.content {
-    max-width: 750px;
-    margin-left: 60px;
-    margin-right: 260px;
-    padding: 40px 20px;
-    text-align: left;
-    line-height: 1.6;
-    box-sizing: border-box;
+input {
+    border : 2px solid black;
+    padding : 8px;
+    border-radius : 10px;
+    font-size : 16px;
+    box-shadow : 2.5px 2.5px 1.25px #888;
+}
+input:focus {
+    outline : None;
+    border : 3px solid black;
 }
 
-/* TITLE */
-h1 {
-    font-family: 'Patrick Hand', cursive;
-    font-size: 4rem;
-    color: #ff3366;
-    margin-bottom: 10px;
-    text-shadow: 3px 3px #ffd166;
-}
-
-/* SUBHEADINGS */
-h2 {
-    font-family: 'Patrick Hand', cursive;
-    color: #06d6a0;
-}
-
-/* PARAGRAPHS */
-p {
-    font-size: 1.3rem;
-    font-weight: 500;
-    margin-bottom: 15px;
-}
-
-/* FORM ELEMENTS */
-input[type="number"] {
-    padding: 10px;
-    font-size: 18px;
-    border: 3px dashed #118ab2;
-    border-radius: 10px;
-    background: #ffffff;
-    font-family: 'Comic Neue';
-}
-
-/* BUTTON */
 button {
-    padding: 12px 20px;
-    font-size: 18px;
-    border: none;
-    background: #ff3366;
-    color: white;
-    cursor: pointer;
-    border-radius: 12px;
-    font-family: 'Patrick Hand', cursive;
-    transition: 0.2s ease;
-    box-shadow: 4px 4px 0px #ffd166;
+    border : 2px solid black;
+    background-color : white;
+    padding : 10px 16px;
+    cursor : pointer;
+    border-radius : 10px;
+    font-size : 16px;
+    margin-left : 16px;
+    box-shadow : 2.5px 2.5px 1.25px #888
 }
-
 button:hover {
-    background: #06d6a0;
-    transform: rotate(-2deg);
+    background-color : #e0e0e0
+    transform : scale(1.05)
 }
 
-/* HEADLINE BOXES */
-.headline {
-    background: #ffffff;
-    padding: 15px;
-    border: 3px solid #118ab2;
-    border-radius: 12px;
-    margin-bottom: 12px;
-    font-size: 1.2rem;
-    box-shadow: 4px 4px 0px #ffd166;
+p {
+    border : 2px dashed black;
+    padding : 15px;
+    margin : 20px 0;
+    font-family : "Patrick Hand",cursive;
+    font-size : 18px;
+    box-shadow : 4px 4px 0 black;
+    background-color : #fcfcfc
 }
 
-/* DIVIDER */
-hr {
-    border: none;
-    border-top: 3px dashed #ff3366;
-    margin: 30px 0;
+p:nth-child(even) {
+    transform : rotate(-1deg);
 }
 
-/* RESPONSIVE DESIGN */
-
-@media (max-width: 1024px) {
-    .content {
-        margin-right: 200px;
-        margin-left: 40px;
-    }
-    h1 { font-size: 3rem; }
+p:nth-child(odd) {
+    transofrm : rotate(1deg)
 }
 
-@media (max-width: 768px) {
-    .vertical-navbar {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        flex-direction: row;
-        justify-content: left;
-        gap: 20px;
-        padding: 10px 25px;
-    }
+.footer {
+    text-align : center;
+    padding : 8px 12px;
+    margin : 20px auto;
 
-    .content {
-        margin: auto;
-        padding-top: 60px;
-        max-width: 90%;
-    }
-
-    h1 { font-size: 2.4rem; }
-}
-
-@media (max-width: 480px) {
-    h1 { font-size: 2rem; }
-    p { font-size: 1rem; }
 }
