@@ -17,8 +17,7 @@ def num(a,b): return random.randint(a, b)
 GENERATORS = [
     lambda: f"Are Millenials Killing the {pick(NOUNS)} Industry?",
     lambda: f"Without this {pick(NOUNS)}! {pick(NOUNS)} Could Kill You {pick(WHEN)}",
-    lambda: f"Big Companies Hate {pick(OBJECT_PRONOUNS)}! See how this {pick(STATES)} {pick(POSSESSIVE_PRONOUNS)} Invented a Cheaper {pick(NOUNS)}",
-    lambda: f"You Wont Believe what this {pick(STATES)} {pick(NOUNS)} found in {pick(POSSESSIVE_PRONOUNS)} {pick(PLACES)}",
+    lambda: f"Big Companies Hate {pick(OBJECT_PRONOUNS)}! See how this {pick(STATES)} {pick(NOUNS)} Invented a Cheaper {pick(NOUNS)}",
     lambda: f"What {pick(NOUNS)} Dont Want You to Know About {pick(NOUNS)}s",
     lambda: f"{num(7,15)} Gift Ideas To Give Your {pick(NOUNS)} from {pick(STATES)}",
     lambda: (n := num(3,19),f"{n} Reasons Why {pick(NOUNS)} are More Interesting Than You Think (Number {num(1,n)} Will Suprise You!)")[1],
@@ -32,7 +31,7 @@ def index():
     if request.method == "POST":
         amount = min(int(request.form.get("amount", 5)), 20)
         headlines = [random.choice(GENERATORS)() for _ in range(amount)]
-    return render_template("inex.html",headlines = headlines)
+    return render_template("inex.html",headlines=headlines)
 
 if __name__ == "__main__":
     import os 
