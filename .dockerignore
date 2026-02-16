@@ -3,9 +3,10 @@ __pycache__
 *.pyo
 *.pyd
 .Python
-env/
-venv/
 .git
 .gitignore
+*.md
+*.log
+.env
 README.md
 .DS_Store
