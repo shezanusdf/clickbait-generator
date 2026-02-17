@@ -1,12 +1,2 @@
-__pycache__
-*.pyc
-*.pyo
-*.pyd
-.Python
-.git
-.gitignore
-*.md
-*.log
-.env
+.github
 README.md
-.DS_Store

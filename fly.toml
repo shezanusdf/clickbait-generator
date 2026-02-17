@@ -1,8 +1,3 @@
-# fly.toml app configuration file generated for clickbait-gen on 2026-02-16T15:24:14+05:30
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
 app = 'clickbait-gen'
 primary_region = 'iad'
 

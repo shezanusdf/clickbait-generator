@@ -31,7 +31,7 @@ def index():
     if request.method == "POST":
         amount = min(int(request.form.get("amount", 5)), 20)
         headlines = [random.choice(GENERATORS)() for _ in range(amount)]
-    return render_template("inex.html",headlines=headlines)
+    return render_template("index.html",headlines=headlines)
 
 if __name__ == "__main__":
     import os 
